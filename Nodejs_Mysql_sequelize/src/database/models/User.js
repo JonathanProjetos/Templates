@@ -8,11 +8,6 @@ const User = (sequelize, DataTypes) => {
       autoIncrement: true, 
     },
 
-    displayName:{
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-
     email:{
       type: DataTypes.STRING,
       allowNull: false
@@ -23,10 +18,6 @@ const User = (sequelize, DataTypes) => {
       allowNull: false
     },
 
-    image:{
-      type: DataTypes.STRING,
-      allowNull: false
-    }
   }, {
     timestamps: false
   });
