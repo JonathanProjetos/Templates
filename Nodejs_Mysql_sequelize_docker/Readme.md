@@ -11,8 +11,8 @@ Este é um boilerplate para um projeto de back-end usando as seguintes stacks:
 - MySQL
 - CORS
 - Bcrypt.js
-- jsonWebToken
-- swagger
+- JsonWebToken
+- Swagger
 
 ## Pré-requisitos
 
