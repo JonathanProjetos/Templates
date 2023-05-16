@@ -37,7 +37,7 @@ Este é um boilerplate para um projeto de back-end usando as seguintes stacks:
 
 3. Configure as variáveis de ambiente:
 
-  Existe um arquivo `.env.example` na raiz do projeto que já inclui todas as variáveis de ambiente necessárias para o funcionamento da aplicação.
+  Existe um arquivo `.env.example` na raiz do projeto que já inclui todas as variáveis de ambiente necessárias para o      funcionamento da aplicação.
 
    ```
    MYSQL_USER=<nome_do_usuario_do_banco_de_dados>
@@ -57,8 +57,7 @@ Este é um boilerplate para um projeto de back-end usando as seguintes stacks:
 
    ```
 5. Comandos auxiliares
-   - Execute docker exec -it back_end bash para acessar o container e rodas dos comandos: 
-
+   - Execute docker exec -it back_end bash para acessar o container e roda os comandos: 
   ```
    npm run db-migrate => cria o banco é roda as migrations.
    npm db-drop => dropa o banco de dados.
