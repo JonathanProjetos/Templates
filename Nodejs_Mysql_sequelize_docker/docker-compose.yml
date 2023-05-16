@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  node:
+    image: node:16.14
+    container_name: back_end
+    user: "node"
+    tty: true
+    stdin_open: true
+    restart: always
+    command: bash -c "npm install && npm start"
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - ./package.json:/app/package.json
+      - ./package-lock.json:/app/package-lock.json
+    depends_on:
+      - db
+    ports:
+      - 3001:3001
+    environment:
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - HOSTNAME=${HOST}
+      - JWT_SECRET=${JWT_SECRET}
+
+  db:
+    container_name: back_end_db
+    image: mysql:8.0
+    platform: linux/x86_64
+    restart: always
+    ports:
+      - 3306:3306 
+    environment:
+     - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
+
+networks:
+    default:
+      name: back_end_net
